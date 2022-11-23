@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 1.8rem;
+
+  width: min(37rem, 90%);
+  margin: 0 auto;
+  height: 100vh;
+
+  position: relative;
+
+  background-image: url("./images/bg-main-mobile.png");
+  background-size: cover;
+}
+
+main {
+  color: white;
+  position: relative;
+
+  height: 25rem;
+}
+
+main img {
+  width: 30rem;
+}
+
+.card-back {
+  position: absolute;
+  right: 1rem;
+  top: 4rem;
+}
+
+.card-front {
+  position: absolute;
+  left: 1rem;
+  top: 13.2rem;
+}
+
+.logo {
+  width: 5rem;
+  position: absolute;
+  top: 15rem;
+  left: 2.5rem;
+}
+
+form {
+  padding: 10rem 3rem 5rem 3rem;
+  background-color: white;
+
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  color: hsl(278, 68%, 11%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.data {
+  position: absolute;
+  z-index: 1;
+  top: 21.5rem;
+  left: 3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  letter-spacing: 0.3rem;
+
+  width: clamp(15rem, 25rem + 10vw, 26rem);
+}
+
+.data-2 {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.date-div {
+  display: flex;
+}
+
+#cvcOnScreen {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+
+  position: absolute;
+  z-index: 1;
+  top: 11.4rem;
+  right: 4.5rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font-family: 'Space Grotesk', sans-serif;
+
+  padding: 1.3rem;
+  font-size: 1.7rem;
+
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.input-wrapper-third {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.input-wrapper-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs-date {
+  display: flex;
+}
+
+#month, #year {
+  width: 7rem;
+}
+
+#month {
+  margin-right: 1rem;
+}
+
+.random-input {
+  display: none;
+}
+
+button {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: hsl(278, 68%, 11%);
+
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: white;
+
+  padding: 1.8rem;
+  border-radius: 1rem;
+  border: none;
+
+  cursor: pointer;
+  transition: background .2s;
+}
+
+button:hover {
+  background-color: hsl(278, 65%, 28%);
+}
+
+input:focus {
+  outline: 2px solid hsl(279, 6%, 55%);
+}
+
+input[data-blur]:invalid {
+  border: 2px solid rgba(255, 82, 82, 0.7);
+}
+
+
+.screen2 {
+  padding: 10rem 3rem 10rem 3rem;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.screen2 img {
+  width: 8rem;
+  margin-bottom: 2rem;
+}
+
+.screen2 h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: hsl(278, 68%, 11%);
+}
+
+.screen2 p {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  margin-bottom: 4rem;
+}
+
+.screen2 button {
+  width: 100%;
+}
+
+@media (max-width: 400px) {
+
+  main img {
+    width: 25rem;
+  }
+
+  .logo {
+    width: 4rem;
+    top: 17.5rem;
+    left: 2.5rem;
+  }
+
+  .card-back {
+    right: 0rem;
+    top: 8rem;
+  }
+  
+  .card-front {
+    left: 1rem;
+    top: 16rem;
+  }  
+
+  .data {
+    z-index: 1;
+    top: 23rem;
+    left: 2.5rem;
+  
+    font-size: 1rem;
+  
+    width: 22rem;
+  }
+
+  #cvcOnScreen {
+    top: 14.1rem;
+    right: 3rem;
+  }
+
+}
+
+@media (min-width: 1120px) {
+  body {
+
+    background-image: url('./images/bg-main-desktop.png');
+    background-size: contain;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    width: 100%;
+  }
+
+  .screen1 {
+    background-color: white;
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+
+  form {
+    margin-top: -5rem;
+    width: 45%;
+  }
+
+  main img {
+    width: clamp(30rem, 30rem + 10vh, 40rem);
+  }
+
+  .logo {
+    width: 7rem;
+    top: 12rem;
+    left: 8rem;
+  }
+
+  .card-back {
+    left: 15rem;
+    top: 33rem;
+
+  }
+  
+  .card-front {
+    left: 6rem;
+    top: 10rem;
+  } 
+
+  .data {
+    top: 21.5rem;
+    left: 8rem;
+  
+    width: 33rem;
+    font-size: 2.1rem;
+  }
+
+  #cvcOnScreen {
+    font-size: 1.4rem;
+
+    top: 41.9rem;
+    left: 43.5rem;
+  }
+
+  .screen2 {
+    padding-top: 15rem;
+  }
+
+  .screen2 button{
+    width: 45%;
+  }
+
+}
+
+.hide {
+  display: none;
+}

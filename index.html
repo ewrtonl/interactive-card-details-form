@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main>
+      <img class="card-back" src="./images/bg-card-back.png" alt="" />
+      <img class="card-front" src="./images/bg-card-front.png" alt="" />
+      <img class="logo" src="./images/card-logo.svg" alt="" />
+
+      <div class="data">
+        <p id="cardOnScreen">0000 0000 0000 0000</p>
+
+        <div class="data-2">
+          <p id="nameOnScreen">Jane Appleseed</p>
+
+          <div class="date-div">
+            <p id="monthOnScreen">00</p>
+            <p>/</p>
+            <p id="yearOnScreen">00</p>
+          </div>
+        </div>
+      </div>
+      <p id="cvcOnScreen">000</p>
+    </main>
+
+    <div class="screen1">
+      <form id="card-data">
+        <div class="input-wrapper">
+          <p>Cardholder Name</p>
+          <input
+            required
+            id="name"
+            type="text"
+            maxlength="25"
+            placeholder="e.g. Jane Appleseed"
+          />
+        </div>
+
+        <div class="input-wrapper">
+          <p>Card Number</p>
+          <input
+            required
+            id="card-number"
+            type="text"
+            maxlength="19"
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+        </div>
+
+        <div class="input-wrapper-third">
+          <div class="input-wrapper-date">
+            <p>Exp. Date (MM/YY)</p>
+
+            <div class="inputs-date">
+              <input
+              required
+              id="month"
+              type="text"
+              placeholder="MM"
+              maxlength="2"
+            />
+            <input
+              required
+              id="year"
+              type="text"
+              placeholder="YY"
+              maxlength="2"
+            />
+            </div>
+          </div>
+  
+          <div class="input-wrapper">
+            <p>CVC</p>
+            <input
+              required
+              id="cvc"
+              type="text"
+              placeholder="e.g. 123"
+              maxlength="3"
+            />
+          </div>
+
+        </div>
+
+        <button form="card-data" id="buttonConfirm">Confirm</button>
+      </form>
+    </div>
+
+    <div class="screen2 hide">
+      <img src="./images/icon-complete.svg" alt="" />
+      <h2>Thank you!</h2>
+      <p>We've added your card details</p>
+      <button id="continue">Continue</button>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
